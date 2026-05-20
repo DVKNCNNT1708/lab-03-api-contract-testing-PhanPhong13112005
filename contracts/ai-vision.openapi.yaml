@@ -2,19 +2,20 @@ openapi: 3.0.0
 info:
   title: AI Vision Dummy Mock
   version: 1.0.0
-  description: Dummy API for AI Vision to pass CI/CD linting and mock server
+  description: Dummy API for AI Vision to pass CI/CD wait-on
   contact:
     name: Team 08
     email: contact@example.com
 servers:
   - url: http://localhost:4011
+  - url: http://127.0.0.1:4011
   - url: http://0.0.0.0:4011
 paths:
   /health:
     get:
-      summary: Health check
-      description: Returns the health status of the API
-      operationId: checkHealth
+      summary: Health check GET
+      description: Returns health status
+      operationId: checkHealthGet
       tags:
         - Health
       responses:
@@ -28,3 +29,12 @@ paths:
                   status:
                     type: string
                     example: "ok"
+    head:
+      summary: Health check HEAD
+      description: Returns headers for health status
+      operationId: checkHealthHead
+      tags:
+        - Health
+      responses:
+        '200':
+          description: OK
