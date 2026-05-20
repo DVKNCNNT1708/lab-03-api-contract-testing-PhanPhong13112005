@@ -39,11 +39,8 @@ jobs:
       - name: Show Prism logs on failure
         if: failure()
         run: |
-          echo "=== Prism Server Logs ==="
-          cat prism.log || true
-          echo ""
-          echo "=== Full Process Info ==="
-          ps aux || true
+          cat prism-iot.log || true
+          cat prism-vision.log || true
 
       - name: Upload Newman reports
         if: always()

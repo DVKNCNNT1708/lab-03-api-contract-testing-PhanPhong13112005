@@ -2,10 +2,18 @@ openapi: 3.0.0
 info:
   title: AI Vision Dummy Mock
   version: 1.0.0
+  description: Dummy API for AI Vision to pass CI/CD linting
+  contact:
+    name: Team 08
+    email: contact@example.com
 paths:
   /health:
     get:
       summary: Health check
+      description: Returns the health status of the API
+      operationId: checkHealth
+      tags:
+        - Health
       responses:
         '200':
           description: OK
