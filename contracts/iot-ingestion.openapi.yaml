@@ -48,6 +48,15 @@ paths:
                   value:
                     status: ok
                     service: iot-ingestion-service
+    head:
+      operationId: headHealth
+      summary: Kiểm tra trạng thái service (HEAD)
+      description: Health check endpoint supporting HEAD requests for monitoring tools.
+      tags: [health]
+      security: []
+      responses:
+        '200':
+          description: Service đang hoạt động ổn định
 
   # Path 2: Tiếp nhận dữ liệu (POST) và Phân trang lịch sử (GET)
   /api/v1/telemetry:
