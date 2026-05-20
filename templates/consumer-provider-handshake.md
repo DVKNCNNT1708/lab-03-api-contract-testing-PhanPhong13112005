@@ -3,55 +3,24 @@
 ## Thông tin chung
 
 - Lab: FIT4110 Lab 03
-- Ngày:
-- Provider team:
-- Consumer team:
-- Provider service:
-- Consumer service:
+- Ngày: 2026-05-20
+- Provider team: Team 08 (IoT Ingestion - B1)
+- Consumer team: Team B6 (Core Business)
+- Provider service: IoT Ingestion Service
+- Consumer service: Core Business Service
 
 ## Contract
 
-- Contract file:
-- Mock base URL:
-- Auth method:
-- Endpoint được test:
+- Contract file: `contracts/iot-ingestion.openapi.yaml`
+- Mock base URL: `http://localhost:4010`
+- Auth method: Bearer Token (JWT)
+- Endpoint được test: `POST /api/v1/telemetry`, `GET /api/v1/telemetry`, `GET /health`
 
 ## Smoke test
 
 ### Request
 
 ```http
-METHOD /path
-Authorization: Bearer <token>
+POST /api/v1/telemetry
+Authorization: Bearer lab-token
 Content-Type: application/json
-```
-
-```json
-{
-}
-```
-
-### Expected response
-
-```json
-{
-}
-```
-
-## Kết quả
-
-- [ ] Consumer gọi mock thành công.
-- [ ] Consumer parse được field cần dùng.
-- [ ] Consumer hiểu lỗi 4xx/5xx provider trả về.
-- [ ] Có Newman report hoặc screenshot.
-
-## Ghi chú thay đổi hợp đồng
-
-| Nội dung | Trước | Sau | Người đồng ý |
-|---|---|---|---|
-| | | | |
-
-## Xác nhận
-
-- Provider representative:
-- Consumer representative:
